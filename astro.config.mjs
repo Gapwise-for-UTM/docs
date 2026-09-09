@@ -15,9 +15,7 @@ export default defineConfig({
         alt: "Gapwise",
       },
       customCss: ["./src/styles/custom.css", "./src/styles/gapwise-core-theme.css"],
-      social: [
-        { icon: "github", label: "GitHub", href: "https://github.com/Gapwise-for-UTM" },
-      ],
+      social: [{ icon: "github", label: "GitHub", href: "https://gapwise.ca/github/docs" }],
       editLink: {
         baseUrl: "https://github.com/Gapwise-for-UTM/gapwise-docs/edit/main/",
       },
