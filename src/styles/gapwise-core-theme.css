@@ -1,1 +1,182 @@
-:root{--sl-color-bg:#0a0a0b;--sl-color-bg-nav:rgba(9,9,10,.92);--sl-color-bg-sidebar:#0c0c0e;--sl-color-hairline:#292b2f;--sl-color-accent-low:#1a1b1e;--sl-color-accent:#f1f3f5;--sl-color-accent-high:#ffffff;--sl-color-gray-1:#f4f5f6;--sl-color-gray-2:#c8cbd0;--sl-color-gray-3:#999da4;--sl-color-gray-4:#71757d;--sl-color-gray-5:#2b2e33;--sl-color-gray-6:#15171a;--sl-color-black:#0a0a0b}html{background:#0a0a0b;scrollbar-color:#35383e #0a0a0b}body{background:radial-gradient(circle at 20% -10%,rgba(255,255,255,.045),transparent 34rem),linear-gradient(180deg,#0a0a0b 0,#0d0e10 60%,#09090a 100%)}body:before{content:"";position:fixed;z-index:-1;inset:4rem 0 auto 0;height:280px;pointer-events:none;opacity:.18;background-image:repeating-radial-gradient(ellipse at 50% 0,transparent 0 48px,rgba(255,255,255,.08) 49px 50px,transparent 51px 79px);mask-image:linear-gradient(to bottom,black,transparent)}header.header{border-bottom-color:rgba(255,255,255,.10);background:rgba(9,9,10,.90);backdrop-filter:blur(20px) saturate(120%)}.site-title{font-weight:720;letter-spacing:-.035em}.site-title img{filter:none}.sidebar-pane{border-inline-end-color:#292b2f;background:rgba(12,12,14,.94)}.right-sidebar{border-inline-start-color:#292b2f}.main-frame{background:transparent}.content-panel{background:transparent}.sl-markdown-content h1,.sl-markdown-content h2,.sl-markdown-content h3{letter-spacing:-.04em}.sl-markdown-content a{color:#f1f3f5}.sl-markdown-content code:not(:where(.not-content *)){border:1px solid #2b2e33;background:#121316;color:#e3e5e8}.expressive-code{--ec-brdCol:#2b2e33!important;--ec-frm-edBg:#101114!important;--ec-frm-edActTabBg:#18191d!important}.card{border-color:#2b2e33!important;background:linear-gradient(180deg,rgba(24,25,28,.96),rgba(14,15,17,.96))!important;border-radius:1rem!important;box-shadow:inset 0 1px rgba(255,255,255,.025)}.card:hover{border-color:#474b52!important}.hero h1{letter-spacing:-.06em}.hero .tagline{color:#a6a9ae}.hero .actions a:first-child{background:#ededee;border-color:#ffffff;color:#101114}.hero .actions a:first-child:hover{background:#ffffff}.pagination-links a{border-color:#2b2e33;background:#111215}.pagination-links a:hover{border-color:#494d54;background:#181a1e}.starlight-aside{border-color:#3a3d43;background:#141518}.sl-link-card{border-color:#2b2e33!important;background:#111215!important}.sl-link-card:hover{border-color:#494d54!important;background:#181a1e!important}:root[data-theme='light']{--sl-color-accent:#111214;--sl-color-bg:#fafafa;--sl-color-bg-nav:rgba(250,250,250,.94);--sl-color-bg-sidebar:#f5f5f5;--sl-color-hairline:#dadce0;--sl-color-black:#fafafa}
+/* Gapwise Linear ecosystem theme — Docs */
+:root {
+  --sl-color-bg:#0a0c0f;
+  --sl-color-bg-nav:#0a0c0f;
+  --sl-color-bg-sidebar:#0d1014;
+  --sl-color-hairline:#262b32;
+  --sl-color-accent-low:#15191e;
+  --sl-color-accent:#f2f4f6;
+  --sl-color-accent-high:#ffffff;
+  --sl-color-gray-1:#f4f5f6;
+  --sl-color-gray-2:#c8cdd3;
+  --sl-color-gray-3:#9ba2ab;
+  --sl-color-gray-4:#737c87;
+  --sl-color-gray-5:#2a3037;
+  --sl-color-gray-6:#14181d;
+  --sl-color-black:#0a0c0f;
+}
+
+html {
+  background:var(--sl-color-bg);
+  scrollbar-color:#343b45 var(--sl-color-bg);
+}
+
+body {
+  background:var(--sl-color-bg)!important;
+}
+
+body:before {
+  display:none!important;
+}
+
+::selection {
+  background:rgba(255,255,255,.16);
+}
+
+header.header {
+  border-bottom-color:var(--sl-color-hairline)!important;
+  background:var(--sl-color-bg)!important;
+  backdrop-filter:none!important;
+}
+
+.site-title {
+  font-weight:700;
+  letter-spacing:-.035em;
+}
+
+.site-title img {
+  filter:none!important;
+}
+
+.sidebar-pane {
+  border-inline-end-color:var(--sl-color-hairline)!important;
+  background:var(--sl-color-bg-sidebar)!important;
+}
+
+.right-sidebar {
+  border-inline-start-color:var(--sl-color-hairline)!important;
+}
+
+.main-frame,
+.content-panel {
+  background:transparent!important;
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.hero h1 {
+  letter-spacing:-.045em;
+}
+
+.hero h1 {
+  font-weight:560!important;
+  letter-spacing:-.06em;
+}
+
+.hero .tagline {
+  color:#9da4ad!important;
+}
+
+.sl-markdown-content a {
+  color:#f1f3f5;
+}
+
+.sl-markdown-content code:not(:where(.not-content *)) {
+  border:1px solid var(--sl-color-hairline)!important;
+  border-radius:.35rem!important;
+  background:#11151a!important;
+  color:#e6e8eb!important;
+}
+
+.expressive-code {
+  --ec-brdCol:var(--sl-color-hairline)!important;
+  --ec-frm-edBg:#0f1317!important;
+  --ec-frm-edActTabBg:#171c22!important;
+}
+
+.card,
+.sl-link-card,
+.pagination-links a,
+.starlight-aside {
+  border-color:var(--sl-color-hairline)!important;
+  background:#0f1317!important;
+  box-shadow:none!important;
+}
+
+.card {
+  border-radius:.6rem!important;
+}
+
+.card:hover,
+.sl-link-card:hover,
+.pagination-links a:hover {
+  border-color:#414852!important;
+  background:#13181e!important;
+}
+
+.hero .actions a {
+  border-radius:.5rem!important;
+  box-shadow:none!important;
+}
+
+.hero .actions a:first-child {
+  border-color:#fff!important;
+  background:#f1f3f5!important;
+  color:#111419!important;
+}
+
+.hero .actions a:first-child:hover {
+  background:#fff!important;
+}
+
+.pagination-links a {
+  border-radius:.55rem!important;
+}
+
+.starlight-aside {
+  border-radius:.45rem!important;
+}
+
+.sl-link-card {
+  border-radius:.55rem!important;
+}
+
+nav.sidebar a[aria-current='page'],
+.sidebar-pane a[aria-current='page'] {
+  border-radius:.35rem!important;
+  background:#171b20!important;
+}
+
+:where(a,button,input,summary):focus-visible {
+  outline:2px solid #f1f3f5!important;
+  outline-offset:3px;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent:#111214;
+  --sl-color-bg:#fafafa;
+  --sl-color-bg-nav:#fafafa;
+  --sl-color-bg-sidebar:#f5f5f5;
+  --sl-color-hairline:#d9dde2;
+  --sl-color-black:#fafafa;
+}
+
+:root[data-theme='light'] body {
+  background:#fafafa!important;
+}
+
+:root[data-theme='light'] .card,
+:root[data-theme='light'] .sl-link-card,
+:root[data-theme='light'] .pagination-links a,
+:root[data-theme='light'] .starlight-aside {
+  background:#fff!important;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .card,
+  .sl-link-card,
+  .pagination-links a {
+    transition:none!important;
+  }
+}
