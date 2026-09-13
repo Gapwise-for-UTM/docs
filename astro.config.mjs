@@ -5,88 +5,85 @@ export default defineConfig({
   site: "https://docs.gapwise.ca",
   integrations: [
     starlight({
-      title: "Gapwise Developers",
-      description:
-        "Official developer documentation for the Gapwise campus intelligence platform and permissioned AI/MCP integration.",
-      favicon: "/favicon.svg",
+      title: "Gapwise",
       logo: {
-        light: "./src/assets/logo-mark-blue.svg",
-        dark: "./src/assets/logo-mark-white.svg",
-        alt: "Gapwise",
+        src: "./src/assets/logo-mark.svg",
+        replacesTitle: false,
       },
-      customCss: ["./src/styles/custom.css", "./src/styles/gapwise-core-theme.css"],
-      social: [
-        { icon: "github", label: "GitHub", href: "https://github.com/Gapwise-for-UTM" },
-      ],
+      customCss: ["./src/styles/custom.css"],
       editLink: {
-        baseUrl: "https://github.com/Gapwise-for-UTM/gapwise-docs/edit/main/",
+        baseUrl: "https://github.com/Gapwise-for-UTM/docs/edit/main/",
+      },
+      social: {
+        github: "https://github.com/Gapwise-for-UTM",
       },
       sidebar: [
         {
           label: "Start",
           items: [
-            { label: "Overview", slug: "" },
-            { label: "Choose an integration", slug: "quickstart" },
-          ],
-        },
-        {
-          label: "Data",
-          items: [
-            { label: "Data overview", slug: "data" },
-            { label: "Dataset catalog", slug: "data/datasets" },
-            { label: "Distribution & versioning", slug: "data/distribution" },
-            { label: "Provenance & uncertainty", slug: "data/provenance" },
-            { label: "Contributing campus data", slug: "data/contributing" },
-          ],
-        },
-        {
-          label: "AI & MCP",
-          items: [
-            { label: "AI & MCP overview", slug: "ai" },
-            { label: "Connect an AI client", slug: "ai/connect" },
-            { label: "Authentication & delegation", slug: "ai/authentication" },
-            { label: "Tools", slug: "ai/tools" },
-            { label: "Permissions & writes", slug: "ai/permissions" },
-            { label: "Privacy & security", slug: "ai/privacy" },
-            { label: "Client compatibility", slug: "ai/compatibility" },
-            { label: "Examples", slug: "ai/examples" },
-            { label: "Limitations & troubleshooting", slug: "ai/limitations" },
-            { label: "Support & troubleshooting", slug: "ai/support" },
+            { label: "Overview", slug: "index" },
+            { label: "Quickstart", slug: "quickstart" },
+            { label: "Architecture", slug: "platform/architecture" },
           ],
         },
         {
           label: "SDKs",
           items: [
-            { label: "JavaScript & TypeScript", slug: "sdk/javascript" },
-            { label: "Python", slug: "sdk/python" },
+            { label: "Overview", slug: "sdks/overview" },
+            { label: "JavaScript / TypeScript", slug: "sdks/javascript" },
+            { label: "Python", slug: "sdks/python" },
           ],
         },
         {
           label: "API",
           items: [
-            { label: "API overview", slug: "api" },
+            { label: "Overview", slug: "api/overview" },
             { label: "Buildings", slug: "api/buildings" },
             { label: "Places", slug: "api/places" },
             { label: "Routing", slug: "api/routing" },
             { label: "Gap planning", slug: "api/gap-planning" },
             { label: "Errors", slug: "api/errors" },
-            { label: "Rate limits", slug: "api/rate-limits" },
           ],
         },
         {
           label: "Guides",
-          items: [{ label: "Recipes", slug: "guides/recipes" }],
+          items: [
+            { label: "Use Gapwise with Node", slug: "guides/node" },
+            { label: "Use Gapwise with Python", slug: "guides/python" },
+            { label: "Defensive API clients", slug: "guides/defensive-clients" },
+          ],
+        },
+        {
+          label: "Data",
+          items: [
+            { label: "Overview", slug: "data/overview" },
+            { label: "Provenance", slug: "data/provenance" },
+            { label: "Contributing", slug: "data/contributing" },
+          ],
+        },
+        {
+          label: "AI & MCP",
+          items: [
+            { label: "Overview", slug: "ai/overview" },
+            { label: "Permissions", slug: "ai/permissions" },
+            { label: "MCP tools", slug: "ai/mcp-tools" },
+            { label: "OAuth", slug: "ai/oauth" },
+            { label: "Client compatibility", slug: "ai/client-compatibility" },
+          ],
+        },
+        {
+          label: "Security",
+          items: [
+            { label: "Overview", slug: "platform/security" },
+            { label: "Private cloud", slug: "security/private-cloud" },
+            { label: "AI delegation", slug: "security/ai-delegation" },
+          ],
         },
         {
           label: "Platform",
           items: [
-            { label: "Ecosystem architecture", slug: "platform/ecosystem" },
-            { label: "Security overview", slug: "platform/security" },
-            { label: "Architecture & data flow", slug: "platform/architecture" },
-            { label: "Data & provenance", slug: "platform/provenance" },
-            { label: "Accuracy & uncertainty", slug: "platform/accuracy" },
-            { label: "Privacy", slug: "platform/privacy" },
             { label: "Versioning", slug: "platform/versioning" },
+            { label: "Provenance & uncertainty", slug: "platform/provenance" },
             { label: "Changelog", slug: "platform/changelog" },
           ],
         },
