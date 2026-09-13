@@ -19,7 +19,7 @@ export default defineConfig({
         { icon: "github", label: "GitHub", href: "https://github.com/Gapwise-for-UTM" },
       ],
       editLink: {
-        baseUrl: "https://github.com/Gapwise-for-UTM/gapwise-docs/edit/main/",
+        baseUrl: "https://github.com/Gapwise-for-UTM/docs/edit/main/",
       },
       sidebar: [
         {
