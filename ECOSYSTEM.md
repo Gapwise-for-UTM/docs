@@ -1,20 +1,26 @@
 # Gapwise ecosystem integration
 
-`docs` is the canonical public documentation surface for the six-repository Gapwise ecosystem. It describes released behavior and data owned elsewhere; it must not become an independent source of product semantics or campus facts.
+`docs` is the canonical public documentation surface for the seven-repository Gapwise product ecosystem. It describes released behavior and data owned elsewhere; it must not become an independent source of product semantics or campus facts.
 
-All six canonical repositories are owned by the **Gapwise for UTM** GitHub organization (`Gapwise-for-UTM`). Andrew Muratov remains the creator and primary maintainer.
+All seven first-party product repositories are owned by the **Gapwise for UTM** GitHub organization (`Gapwise-for-UTM`). Organization-wide community/default files live in `.github`. Andrew Muratov remains the creator and primary maintainer.
 
 ## Owning repositories
 
 | Repository | Authoritative for |
 | --- | --- |
 | `Gapwise-for-UTM/gapwise` | web/PWA behavior, student state, deterministic timetable/gap/routing algorithms, public API v1, OpenAPI, TypeScript + Python SDK source and release workflow, map/product presentation |
-| `Gapwise-for-UTM/android` | native Android implementation, device integration, local persistence, and Android distribution behavior |
+| `Gapwise-for-UTM/android` | native Android implementation, Android device integration, persistence adapters, and Android distribution behavior |
+| `Gapwise-for-UTM/ios` | native iOS implementation, Apple-platform integration, persistence adapters, and iOS distribution behavior |
 | `Gapwise-for-UTM/ai` | OAuth/MCP delegation, tool schemas, permissions, bounded mutations, AI compatibility evidence |
 | `Gapwise-for-UTM/data` | **canonical public UTM campus facts and geometry**, entrances, routing graph data, provenance, schemas, evidence, attribution, validation, and reuse |
+| `Gapwise-for-UTM/docs` | released public developer documentation and documentation information architecture |
 | `Gapwise-for-UTM/status` | operational health and incident communication |
 
-`gapwise` vendors a validated build-time mirror of `data/data/utm` at `src/data/utm`. That local path preserves existing imports and deterministic deployment behavior; it is not a second campus-data authority and does not create a runtime dependency on `data.gapwise.ca` or GitHub.
+`gapwise` vendors a validated build-time mirror of `data/utm` from the `data` repository at `src/data/utm`. That local path preserves existing imports and deterministic deployment behavior; it is not a second campus-data authority and does not create a runtime dependency on `data.gapwise.ca` or GitHub.
+
+## Product scope
+
+Gapwise timetable identity supports UTM, UTSG, UTSC, and mixed-campus schedules. The first-party public campus API, map/routing graph, places, and open-data distribution are currently UTM-focused. Documentation must preserve that boundary instead of implying equivalent map/routing coverage at all three campuses.
 
 ## Current developer-platform state
 
@@ -24,8 +30,10 @@ All six canonical repositories are owned by the **Gapwise for UTM** GitHub organ
 - TypeScript SDK: `@gapwise/sdk`
   - npm `0.1.1` is published with provenance
   - JSR `0.1.1` is published with provenance through GitHub Actions OIDC
-  - one TypeScript implementation targets Node, Bun, and Deno portability rather than separate runtime SDKs
+  - one TypeScript implementation targets Node, Bun, Deno, and browser portability rather than separate runtime SDKs
 - Python SDK: `gapwise==0.1.0` is published on PyPI through Trusted Publishing
+- Android source: `https://github.com/Gapwise-for-UTM/android`
+- iOS source: `https://github.com/Gapwise-for-UTM/ios`
 - Data: `https://data.gapwise.ca`
 - AI/MCP: `https://ai.gapwise.ca/api/mcp`
 - Status: `https://status.gapwise.ca`
@@ -38,15 +46,17 @@ TypeScript and Python are equal first-party SDKs. Documentation should provide c
 2. `data` owns raw public UTM campus facts, geometry, routing graph data, provenance, and evidence.
 3. SDK docs follow released package/source behavior and never invent methods or types.
 4. Registry claims are evidence-based: reserved/configured is not the same as published.
-5. Runtime claims are evidence-based: Node/Bun/Deno support should reflect CI/release verification, not assumptions about ESM portability.
+5. Runtime claims are evidence-based: Node/Bun/Deno/browser support should reflect CI/release verification rather than assumptions.
 6. Private AI behavior is documented from `ai` and remains separate from the public campus SDKs.
 7. Data provenance/uncertainty statements link back to `data` and preserve unknown/inferred states.
 8. Operations/status guidance links to `status`; docs do not duplicate live incident state.
-9. Android behavior links to `android` when platform-specific implementation/distribution matters.
-10. Documentation must not imply that core routing performs a runtime fetch from the data portal; deployed core contains the tested snapshot.
+9. Android behavior links to `android` when Android-specific implementation/distribution matters.
+10. iOS behavior links to `ios` when iOS-specific implementation/distribution matters.
+11. All-campus timetable support must not be documented as all-campus map/routing coverage.
+12. Documentation must not imply that core routing performs a runtime fetch from the data portal; deployed core contains the tested snapshot.
 
 ## Change-impact rule
 
-A docs change that alters a contract or data claim should name the owning repository/evidence. A source change in any owning repository should trigger a docs review when it changes a public API, SDK, data schema, AI tool/permission, Android integration requirement, or operational surface.
+A docs change that alters a contract or data claim should name the owning repository/evidence. A source change in any owning repository should trigger a docs review when it changes a public API, SDK, data schema, AI tool/permission, Android/iOS integration requirement, or operational surface.
 
 The goal is connected documentation without duplicated authority.
