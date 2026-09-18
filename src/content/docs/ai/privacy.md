@@ -7,7 +7,7 @@ The public [Gapwise API](/api/) exposes campus intelligence and no student accou
 
 ## What a student can delegate
 
-The minimized Gapwise AI snapshot can expose only the categories enabled by the student's delegation and the tool being called. Depending on those permissions, that can include source-backed academic schedule facts, selected personal items, deterministic Gapwise gap-plan context, and selected planning/routing preferences.
+The minimized Gapwise AI snapshot can expose only the categories enabled by the student's delegation and the tool being called. Depending on those permissions, that can include source-backed academic schedule facts, deterministic Gapwise gap-plan context, and selected planning/routing preferences.
 
 Tool results are scoped interfaces to that delegated snapshot—not an unrestricted account export.
 

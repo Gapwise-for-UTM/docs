@@ -44,11 +44,11 @@ Implementation source: [github.com/andrewmuratov/gapwise-ai](https://github.com/
 
 ## Current live surface
 
-The release surface registers **17 tools**:
+The release surface registers **20 tools**:
 
-- four stateless public UTM campus-intelligence reads;
-- nine OAuth-protected private schedule/status/planning reads; and
-- four bounded OAuth-protected private writes.
+- seven stateless public UTM campus-intelligence reads;
+- twelve OAuth-protected private schedule/status/planning reads; and
+- one bounded OAuth-protected private write.
 
 Important boundaries:
 
@@ -80,7 +80,7 @@ Gapwise remains the source of truth for schedules and private state.
 - Private access starts only after the student explicitly delegates authority.
 - The client receives tool results, not Gapwise encryption keys or unrestricted account access.
 - Delegated state excludes the raw ACORN `.ics` file, friend data, precise/live location, account credentials, and Gapwise's primary private-state encryption keys.
-- Any personal-item or preference write is bounded by its granted permission.
+- Any preference write is bounded by its granted permission.
 - Revocation removes the delegated authority. A later authorization is a new grant, not silent restoration of the old one.
 - A legitimate integration never needs the student's Gapwise password, a private encryption key, or a copied browser-session token.
 

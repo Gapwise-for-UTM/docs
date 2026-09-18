@@ -141,3 +141,25 @@ npm run dev
 [Read the docs →](https://docs.gapwise.ca)
 
 </div>
+
+## Updating the AI tool catalog
+
+AI owns tool registration and the generated `contracts/mcp-live-surface.json` manifest.
+With `ai` and `docs` checked out as siblings:
+
+```bash
+# In ai, after editing registrations:
+npm run contract:generate
+npm run contract:check
+# In docs:
+npm run mcp-contract:sync
+npm run verify:mcp-contract
+npm run mcp-contract:check
+npm run check
+npm run build
+```
+
+Update the tool and permission guides when verification identifies drift. CI checks the
+vendored manifest against AI `main`; merge the AI producer PR before the Docs consumer PR.
+Docs builds use the checked-in manifest and do not fetch AI at runtime. For another checkout
+layout, pass `-- --source=<path/to/mcp-live-surface.json>` to the sync/check command.

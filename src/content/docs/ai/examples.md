@@ -7,11 +7,11 @@ These examples use synthetic student intents. The AI client supplies the convers
 
 ## “What does my day look like?”
 
-Use `get_my_day` for the requested calendar date. Summarize the returned source-backed academic meetings, permitted personal items, and delegated gap context without inventing missing events or locations.
+Use `get_my_day` for the requested calendar date. Summarize the returned source-backed academic meetings, reserved assessment placeholders, and delegated gap context without inventing missing events or locations.
 
 ## “What does my week look like?”
 
-Use `get_my_week` for the academic term. Keep academic meetings visibly distinct from personal items and from any model-generated advice.
+Use `get_my_week` for the academic term. Keep academic meetings visibly distinct from reserved assessment placeholders and any model-generated advice.
 
 ## “Find me a study window”
 
@@ -31,14 +31,10 @@ Use `get_my_gap_plan` for the exact delegated gap window. Preserve Gapwise's ret
 
 ## “Add a personal commitment”
 
-Confirm the intended personal item, read the current revision, check feasibility for a fixed block when appropriate, then call `create_personal_item` only when personal-item writes are delegated.
-
-> Synthetic example: “Study group, Thursday 15:00–16:00.”
-
-A successful MCP call means **the change was queued for Gapwise**. It does not mean the AI client directly rewrote the canonical timetable. Read again before making a dependent change.
-
-If the revision is stale, fetch current state and reconsider instead of force-overwriting.
+Personal Item tools are retired. Explain that Gapwise AI cannot create, edit, or delete timetable items. Read-only availability and feasibility tools can still help assess a proposed interval.
 
 ## “Change my gap preference”
 
 Read the delegated preferences and current revision with `get_my_ai_preferences`, explain the bounded change, then use `update_gap_preferences` only when preference writes are delegated. Preference authority never permits editing an academic meeting.
+
+A successful write means the preference change was **queued for Gapwise**, not immediately applied. If the revision is stale, fetch current state and reconsider; read again before making a dependent change.
