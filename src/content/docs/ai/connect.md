@@ -33,6 +33,6 @@ Authorization happens at the Gapwise boundary. A legitimate integration does not
 
 The MCP transport permits unauthenticated initialization and tool discovery. Protected private tool execution remains fail-closed until the caller presents a verified OAuth credential and the student has an active delegation with the required capability.
 
-The service exposes 17 tools: four stateless public campus reads, nine permissioned private reads/status/planning tools, and four bounded private writes. See [Tools](/ai/tools/) for the catalog and [Authentication & delegation](/ai/authentication/) for the authorization boundaries.
+The service exposes 20 tools: seven stateless public campus reads, twelve permissioned private reads/status/planning tools, and one bounded private write. See [Tools](/ai/tools/) for the catalog and [Authentication & delegation](/ai/authentication/) for the authorization boundaries.
 
 Before connecting a particular product, check [Client compatibility](/ai/compatibility/). Broad named-client support is not claimed until the real production OAuth/read/write/revoke matrices are complete.

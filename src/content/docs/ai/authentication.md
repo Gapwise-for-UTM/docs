@@ -42,7 +42,7 @@ The application ownership assertion is defense in depth: it does not replace RLS
 
 ## Read and write authority
 
-Read and write access are separate. A read grant does not imply write access. The current bounded writes cover supported personal items and gap preferences; imported academic timetable meetings remain read-only.
+Read and write access are separate. A read grant does not imply write access. The current bounded write covers gap preferences; imported academic timetable meetings remain read-only.
 
 See [Permissions & writes](/ai/permissions/) for the `expectedRevision`, queueing, and stale-write contract.
 

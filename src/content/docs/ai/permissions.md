@@ -13,12 +13,9 @@ Academic timetable meetings are read-only through Gapwise AI. They remain source
 
 The current live write surface is deliberately small:
 
-- `create_personal_item`
-- `update_personal_item`
-- `delete_personal_item`
 - `update_gap_preferences`
 
-Each write requires its relevant explicit delegation and the current `expectedRevision`. Personal-item creates and updates are typed, and fixed items are independently revalidated by the service against delegated hard timetable conflicts and known Gapwise transition/activity-envelope violations before the action can be queued.
+Each write requires its relevant explicit delegation and the current `expectedRevision`. Personal Item tools are retired. Compatibility fields in older snapshots do not grant current read or write access to them.
 
 A safe client:
 
@@ -33,7 +30,7 @@ A safe client:
 
 MCP write tools do not directly rewrite Gapwise's canonical encrypted private payload. A successful write creates a typed queued action for the first-party Gapwise application to apply against canonical state. After application, Gapwise republishes a newer delegated snapshot.
 
-This means an assistant must not tell the student “your timetable has been updated” merely because the MCP write returned successfully. The accurate statement is that the requested personal/preference change was queued for Gapwise.
+This means an assistant must not tell the student “your timetable has been updated” merely because the MCP write returned successfully. The accurate statement is that the requested preference change was queued for Gapwise.
 
 ## Stale writes and exact retries
 

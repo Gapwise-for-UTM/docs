@@ -26,6 +26,16 @@ jobs:
           cache: npm
       - name: Install exact dependency graph
         run: npm ci --no-audit --no-fund
+      - name: Check out the authoritative AI contract
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: Gapwise-for-UTM/ai
+          ref: main
+          path: .canonical-ai
+          sparse-checkout: contracts
+          persist-credentials: false
+      - name: Verify the Docs consumer against AI
+        run: npm run mcp-contract:check -- --source=.canonical-ai/contracts/mcp-live-surface.json
       - name: Validate docs content and types
         run: npm run check
       - name: Verify deployment security headers

@@ -20,7 +20,9 @@
     "seo:generate": "node scripts/generate-seo.mjs",
     "build": "npm run verify:brand && npm run verify:mcp-contract && npm run verify:privacy-governance && npm run seo:generate && astro build",
     "preview": "astro preview",
-    "check": "npm run verify:brand && npm run verify:mcp-contract && npm run verify:privacy-governance && npm run seo:generate && astro check"
+    "check": "npm run verify:brand && npm run verify:mcp-contract && npm run verify:privacy-governance && npm run seo:generate && astro check",
+    "mcp-contract:sync": "node scripts/sync-mcp-contract.mjs --write",
+    "mcp-contract:check": "node scripts/sync-mcp-contract.mjs --check"
   },
   "dependencies": {
     "@astrojs/starlight": "0.41.9",

@@ -1,10 +1,13 @@
 {
   "contractVersion": 2,
-  "registeredToolCount": 17,
+  "registeredToolCount": 20,
   "registeredTools": {
     "publicRead": [
       "list_utm_buildings",
+      "search_utm_buildings",
       "get_utm_building",
+      "search_utm_places",
+      "get_utm_place",
       "route_between_utm_buildings",
       "plan_utm_gap_window"
     ],
@@ -12,6 +15,9 @@
       "get_ai_delegation_status",
       "get_my_day",
       "get_my_week",
+      "search_my_schedule",
+      "get_my_course_context",
+      "get_my_schedule_range",
       "get_my_gap_plan",
       "get_my_ai_preferences",
       "get_my_decision_context",
@@ -20,9 +26,6 @@
       "check_my_plan_feasibility"
     ],
     "privateWrite": [
-      "create_personal_item",
-      "update_personal_item",
-      "delete_personal_item",
       "update_gap_preferences"
     ]
   },
