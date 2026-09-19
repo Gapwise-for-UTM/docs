@@ -15,7 +15,7 @@
 
 <br />
 
-**[Gapwise](https://gapwise.ca)** · **[Android](https://github.com/Gapwise-for-UTM/android)** · **[iOS](https://github.com/Gapwise-for-UTM/ios)** · **[API](https://api.gapwise.ca/v1)** · **[AI](https://ai.gapwise.ca)** · **[Data](https://data.gapwise.ca)** · **[Docs](https://docs.gapwise.ca)** · **[Status](https://status.gapwise.ca)**
+**[Gapwise](https://gapwise.ca)** · **[Android](https://github.com/Gapwise-for-UofT/android)** · **[iOS](https://github.com/Gapwise-for-UofT/ios)** · **[API](https://api.gapwise.ca/v1)** · **[AI](https://ai.gapwise.ca)** · **[Data](https://data.gapwise.ca)** · **[Docs](https://docs.gapwise.ca)** · **[Status](https://status.gapwise.ca)**
 
 </div>
 
@@ -31,12 +31,12 @@ The ecosystem includes the core web/PWA, native Android and iOS clients, determi
 
 The docs follow released first-party contracts rather than inventing parallel behavior:
 
-- [`gapwise`](https://github.com/Gapwise-for-UTM/gapwise) owns canonical product semantics, public API/OpenAPI, and SDK source;
-- [`android`](https://github.com/Gapwise-for-UTM/android) owns the native Android implementation;
-- [`ios`](https://github.com/Gapwise-for-UTM/ios) owns the native iOS implementation;
-- [`ai`](https://github.com/Gapwise-for-UTM/ai) owns live MCP/OAuth delegation behavior;
-- [`data`](https://github.com/Gapwise-for-UTM/data) owns canonical public UTM campus facts and provenance;
-- [`status`](https://github.com/Gapwise-for-UTM/status) owns operational state and incident communication.
+- [`gapwise`](https://github.com/Gapwise-for-UofT/gapwise) owns canonical product semantics, public API/OpenAPI, and SDK source;
+- [`android`](https://github.com/Gapwise-for-UofT/android) owns the native Android implementation;
+- [`ios`](https://github.com/Gapwise-for-UofT/ios) owns the native iOS implementation;
+- [`ai`](https://github.com/Gapwise-for-UofT/ai) owns live MCP/OAuth delegation behavior;
+- [`data`](https://github.com/Gapwise-for-UofT/data) owns canonical public UTM campus facts and provenance;
+- [`status`](https://github.com/Gapwise-for-UofT/status) owns operational state and incident communication.
 
 ---
 
@@ -101,15 +101,15 @@ The public API exposes campus intelligence only. It does not expose student time
 
 | Repository | Role | Primary surface |
 | --- | --- | --- |
-| **[`gapwise`](https://github.com/Gapwise-for-UTM/gapwise)** | Core web/PWA, canonical timetable/gap/routing semantics, public API, OpenAPI, and SDK source | [gapwise.ca](https://gapwise.ca) / [api.gapwise.ca](https://api.gapwise.ca/v1) |
-| **[`android`](https://github.com/Gapwise-for-UTM/android)** | Native Kotlin + Jetpack Compose Android client | Android app |
-| **[`ios`](https://github.com/Gapwise-for-UTM/ios)** | Native Swift + SwiftUI iOS client | iOS app |
-| **[`ai`](https://github.com/Gapwise-for-UTM/ai)** | OAuth/MCP layer for explicitly delegated student context and bounded actions | [ai.gapwise.ca](https://ai.gapwise.ca) |
-| **[`data`](https://github.com/Gapwise-for-UTM/data)** | Canonical public UTM campus data, provenance, schemas, validation, and distribution | [data.gapwise.ca](https://data.gapwise.ca) |
-| **[`docs`](https://github.com/Gapwise-for-UTM/docs)** | Canonical public developer documentation | [docs.gapwise.ca](https://docs.gapwise.ca) |
-| **[`status`](https://github.com/Gapwise-for-UTM/status)** | Independent service-health monitoring and incident communication | [status.gapwise.ca](https://status.gapwise.ca) |
+| **[`gapwise`](https://github.com/Gapwise-for-UofT/gapwise)** | Core web/PWA, canonical timetable/gap/routing semantics, public API, OpenAPI, and SDK source | [gapwise.ca](https://gapwise.ca) / [api.gapwise.ca](https://api.gapwise.ca/v1) |
+| **[`android`](https://github.com/Gapwise-for-UofT/android)** | Native Kotlin + Jetpack Compose Android client | Android app |
+| **[`ios`](https://github.com/Gapwise-for-UofT/ios)** | Native Swift + SwiftUI iOS client | iOS app |
+| **[`ai`](https://github.com/Gapwise-for-UofT/ai)** | OAuth/MCP layer for explicitly delegated student context and bounded actions | [ai.gapwise.ca](https://ai.gapwise.ca) |
+| **[`data`](https://github.com/Gapwise-for-UofT/data)** | Canonical public University of Toronto campus data, provenance, schemas, validation, and distribution | [data.gapwise.ca](https://data.gapwise.ca) |
+| **[`docs`](https://github.com/Gapwise-for-UofT/docs)** | Canonical public developer documentation | [docs.gapwise.ca](https://docs.gapwise.ca) |
+| **[`status`](https://github.com/Gapwise-for-UofT/status)** | Independent service-health monitoring and incident communication | [status.gapwise.ca](https://status.gapwise.ca) |
 
-These seven first-party product repositories form one ecosystem with deliberate separation of concerns, consistent links, trust boundaries, and source-of-truth ownership. Organization-wide GitHub defaults live separately in [`.github`](https://github.com/Gapwise-for-UTM/.github).
+These seven first-party product repositories form one ecosystem with deliberate separation of concerns, consistent links, trust boundaries, and source-of-truth ownership. Organization-wide GitHub defaults live separately in [`.github`](https://github.com/Gapwise-for-UofT/.github).
 
 ---
 
@@ -118,7 +118,7 @@ These seven first-party product repositories form one ecosystem with deliberate 
 Requires Node.js 22 or newer.
 
 ```bash
-git clone https://github.com/Gapwise-for-UTM/docs.git
+git clone https://github.com/Gapwise-for-UofT/docs.git
 cd docs
 npm install
 npm run check
@@ -126,7 +126,7 @@ npm run build
 npm run dev
 ```
 
-`main` is the production documentation branch and deploys to `docs.gapwise.ca`. The status service is deployed independently from [`status`](https://github.com/Gapwise-for-UTM/status); documentation links to it rather than becoming a second status source.
+`main` is the production documentation branch and deploys to `docs.gapwise.ca`. The status service is deployed independently from [`status`](https://github.com/Gapwise-for-UofT/status); documentation links to it rather than becoming a second status source.
 
 ---
 
