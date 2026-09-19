@@ -1,6 +1,6 @@
 # Campus data ownership
 
-Canonical public UTM campus facts and geometry live in `Gapwise-for-UTM/data` under `data/utm`.
+Canonical public UTM campus facts and geometry live in `Gapwise-for-UofT/data` under `data/utm`.
 
 `gapwise` consumes a validated build-time snapshot and remains authoritative for deterministic routing/gap-planning behavior, the public API/OpenAPI contract, SDK semantics, and product presentation. `docs` documents released contracts; it must not become an independent source of campus facts or product behavior.
 
