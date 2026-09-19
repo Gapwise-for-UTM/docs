@@ -7,14 +7,14 @@ Gapwise Data is the canonical public source for the UTM campus facts and geometr
 
 - **Portal:** `https://data.gapwise.ca`
 - **Entrance contributor:** `https://data.gapwise.ca/contribute`
-- **Canonical repository:** `Gapwise-for-UTM/data`
+- **Canonical repository:** `Gapwise-for-UofT/data`
 - **Raw distribution:** `https://data.gapwise.ca/datasets/utm/latest/`
 - **Distribution manifest:** `https://data.gapwise.ca/datasets/utm/latest/manifest.json`
 - **Stable application API:** `https://api.gapwise.ca/v1`
 
 ## Source of truth
 
-`Gapwise-for-UTM/data` owns public campus facts: building identity, coordinates and footprints, entrances, routing graph inputs, available indoor data, provenance, evidence, uncertainty, and generated data audits.
+`Gapwise-for-UofT/data` owns public campus facts: building identity, coordinates and footprints, entrances, routing graph inputs, available indoor data, provenance, evidence, uncertainty, and generated data audits.
 
 The main `gapwise` repository owns deterministic behavior: route calculation, timetable semantics, gap planning, API orchestration, SDK contracts, and product presentation.
 
@@ -27,7 +27,7 @@ No. Gapwise web and API builds contain a tested snapshot of the canonical datase
 The relationship is:
 
 ```text
-Gapwise-for-UTM/data canonical tree
+Gapwise-for-UofT/data canonical tree
         ↓ validate / pin
 Gapwise build snapshot
         ↓
@@ -44,7 +44,7 @@ External developers can use the first-party Data distribution directly when raw 
 | Raw GeoJSON / graph / audit artifacts | Gapwise Data distribution |
 | Provenance and uncertainty explanation | These docs + Data portal |
 | Add or correct a UTM entrance | [Visual entrance contributor](https://data.gapwise.ca/contribute) |
-| Change validators, schemas, canonical tooling, or other campus facts | [`Gapwise-for-UTM/data`](https://github.com/Gapwise-for-UTM/data) |
+| Change validators, schemas, canonical tooling, or other campus facts | [`Gapwise-for-UofT/data`](https://github.com/Gapwise-for-UofT/data) |
 | Permissioned private student context | Gapwise AI / MCP |
 
 Entrance submissions from the visual contributor are review evidence; they do not write directly to canonical routing data. See [Contributing campus data](/data/contributing/) for the evidence and review workflow.

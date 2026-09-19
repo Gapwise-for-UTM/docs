@@ -13,7 +13,7 @@ Tool results are scoped interfaces to that delegated snapshot—not an unrestric
 
 ## What the delegated snapshot excludes
 
-The current `gapwise-ai` boundary deliberately excludes:
+The current Gapwise AI boundary deliberately excludes:
 
 - the original ACORN `.ics` file;
 - friend and friend-overlap data;
@@ -45,4 +45,4 @@ The external AI provider may separately process prompts and tool results visible
 - Handle stale revisions by reading again, not force-overwriting.
 - Stop on revocation or authorization failure.
 
-For deeper review, see the [`gapwise-ai` privacy model](https://github.com/andrewmuratov/gapwise-ai/blob/main/docs/PRIVACY.md), [threat model](https://github.com/andrewmuratov/gapwise-ai/blob/main/docs/THREAT_MODEL.md), and [security policy](https://github.com/andrewmuratov/gapwise-ai/blob/main/SECURITY.md).
+For deeper review, see the [`ai` privacy model](https://github.com/Gapwise-for-UofT/ai/blob/main/docs/PRIVACY.md), [threat model](https://github.com/Gapwise-for-UofT/ai/blob/main/docs/THREAT_MODEL.md), and [security policy](https://github.com/Gapwise-for-UofT/ai/blob/main/SECURITY.md).

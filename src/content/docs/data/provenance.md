@@ -28,4 +28,4 @@ Where upstream source identifiers exist, Gapwise keeps them attached to the rele
 
 ## Corrections
 
-If you find a campus fact that is stale or wrong, contribute the correction to `gapwise-data` with the strongest evidence available. Product code should not silently patch a canonical campus fact inside `gapwise`, mobile, or AI.
+If you find a campus fact that is stale or wrong, contribute the correction to `data` with the strongest evidence available. Product code should not silently patch a canonical campus fact inside `gapwise`, mobile, or AI.

@@ -1,22 +1,23 @@
 ---
 title: Ecosystem architecture
-description: How the six Gapwise repositories, public SDKs, data, mobile, AI, docs, and status surfaces fit together.
+description: How the seven Gapwise repositories, public SDKs, data, mobile, AI, docs, and status surfaces fit together.
 ---
 
-Gapwise is one product ecosystem across six first-party repositories. Repository boundaries separate deployment, trust, and ownership; they do not create parallel sources of truth.
+Gapwise is one product ecosystem across seven first-party repositories. Repository boundaries separate deployment, trust, and ownership; they do not create parallel sources of truth.
 
-All canonical repositories are owned by the **Gapwise for UTM** GitHub organization: `https://github.com/Gapwise-for-UTM`. Andrew Muratov remains the creator and primary maintainer.
+All canonical repositories are owned by the **Gapwise for UofT** GitHub organization: `https://github.com/Gapwise-for-UofT`. Andrew Muratov remains the creator and primary maintainer.
 
 ## Repository ownership
 
 | Repository | Owns |
 | --- | --- |
-| `Gapwise-for-UTM/gapwise` | web/PWA behavior, canonical student-state semantics, deterministic timetable/gap/routing logic, public API v1, OpenAPI, and both official SDK implementations |
-| `Gapwise-for-UTM/gapwise-mobile` | native iOS/Android UX, device integration, secure mobile persistence, and mobile distribution |
-| `Gapwise-for-UTM/gapwise-ai` | OAuth/MCP delegation, permission checks, minimized delegated snapshots, and bounded AI actions |
-| `Gapwise-for-UTM/gapwise-data` | campus-data provenance, evidence, schemas, attribution, transformations, and reuse guidance |
-| `Gapwise-for-UTM/gapwise-docs` | canonical public documentation of released first-party contracts |
-| `Gapwise-for-UTM/gapwise-status` | independently deployed service health and incident communication |
+| `Gapwise-for-UofT/gapwise` | web/PWA behavior, canonical student-state semantics, deterministic timetable/gap/routing logic, public API v1, OpenAPI, and both official SDK implementations |
+| `Gapwise-for-UofT/android` | native Android UX, device integration, secure mobile persistence, and Android distribution |
+| `Gapwise-for-UofT/ios` | native iOS UX, device integration, secure mobile persistence, and iOS distribution |
+| `Gapwise-for-UofT/ai` | OAuth/MCP delegation, permission checks, minimized delegated snapshots, and bounded AI actions |
+| `Gapwise-for-UofT/data` | campus-data provenance, evidence, schemas, attribution, transformations, and reuse guidance |
+| `Gapwise-for-UofT/docs` | canonical public documentation of released first-party contracts |
+| `Gapwise-for-UofT/status` | independently deployed service health and incident communication |
 
 ## Source-of-truth flow
 
@@ -41,11 +42,11 @@ private student state
         |
         | explicit minimized delegation
         v
-  gapwise-ai OAuth/MCP
+  ai repository OAuth/MCP
 
-released contracts ---> gapwise-docs
-provenance/evidence --> gapwise-data
-public service health -> gapwise-status
+released contracts ---> docs repository
+provenance/evidence --> data repository
+public service health -> status repository
 ```
 
 ## SDK distribution model
@@ -75,7 +76,7 @@ TypeScript and Python are equal first-party SDKs. Language-appropriate naming is
 
 ## Canonical public surfaces
 
-- GitHub: `https://github.com/Gapwise-for-UTM`
+- GitHub: `https://github.com/Gapwise-for-UofT`
 - App: `https://gapwise.ca`
 - API: `https://api.gapwise.ca/v1`
 - OpenAPI: `https://api.gapwise.ca/openapi.json`
